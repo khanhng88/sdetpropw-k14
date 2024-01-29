@@ -4,7 +4,7 @@ let arr2 =[1, 13, 16, 27, 99]
 
 
 // let mergeArr = [...arr1, ...arr2]
-let mergeArr2 = arr1.concat(arr2)
-console.log(mergeArr2.sort(sortNumAsc))
+let mergeArr = arr1.concat(arr2)
+console.log(mergeArr.sort(sortNumAsc))
 
 
