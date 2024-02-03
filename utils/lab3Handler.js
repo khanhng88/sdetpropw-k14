@@ -21,8 +21,41 @@ function selfSortAsc(myarr) {
     return myarr
 }
 
+/**
+ * Return index of smallest value
+ */
+function findIndexOfSmallest(arr) {
+    let smallest = arr[0]
+    let smallestIndex = 0
+    for (let index = 1; index < arr.length; index++) {
+        if(smallest > arr[index]) {
+            smallest = arr[index]
+            smallestIndex = index
+        }
+        
+    }
+    return smallestIndex
+}
+
+/**
+ * Pick the smallest value from original array and push to new array
+ */
+function secondSort(arr) {
+    const sortArr = []
+    while(arr.length) {
+        let smallestIndex = findIndexOfSmallest(arr)
+        sortArr.push(...arr.splice(smallestIndex,1))
+       
+        console.log('original array after splice', arr)
+        console.log('sort array after push', sortArr)
+        console.log('\n');
+    }
+    return sortArr
+}
+
 module.exports = {
     isEven: isEven,
     sortNumAsc: sortNumAsc,
-    selfSortAsc: selfSortAsc
+    selfSortAsc: selfSortAsc,
+    secondSort
 }
