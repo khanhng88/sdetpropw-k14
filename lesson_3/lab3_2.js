@@ -1,4 +1,4 @@
-const {isEven, sortNumAsc } = require('../utils/lab3Handler')
+const {sortNumAsc } = require('../utils/lab3Handler')
 let myarr = [2,5,6,7,99,11,33]
 let sortedArr = myarr.sort(sortNumAsc)
 console.log(sortedArr);
