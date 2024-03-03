@@ -8,9 +8,6 @@ GET	/posts/1/comments
 GET	/comments?postId=1
 
 */
-// const readLine = require('readline-sync')
-// let userId = readLine.question('Please input your userid: ')
-// let postId = readLine.question('Please input your postid: ')
 
 function getAllPosts() {
     const targetURL = 'https://jsonplaceholder.typicode.com/posts'
@@ -25,7 +22,6 @@ function getAllPosts() {
 function run(userId , postId) {
     const value =  getAllPosts()
     let valueJson =  value.json()
-    // console.log(valueJson);
 
     let arrayObj = valueJson
     let userId = readLine.question('Please input your userid: ')

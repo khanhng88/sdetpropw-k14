@@ -1,12 +1,9 @@
 //using PROMISE and async await
 /*
-
-
 GET	/posts
 GET	/posts/1
 GET	/posts/1/comments
 GET	/comments?postId=1
-
 */
 const readLine = require('readline-sync')
 
