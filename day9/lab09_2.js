@@ -29,7 +29,9 @@ async function run() {
         return post.userId == userId && post.id == postId
     })
     if(targetPost.length > 0) {
-        console.log('Found post\n', targetPost);
+        console.log('Found post\n');
+        console.log('Here is its body\n',targetPost[0].body);
+        
     }else{
         console.log('not found');
     }
