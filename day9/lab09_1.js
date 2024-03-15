@@ -27,8 +27,26 @@ function run() {
         const targetPost = posts.filter(function(post) {
             return post.userId == userId && post.id == postId
         })
+        console.log('Target post is: ');
         if(targetPost.length > 0) {
-            console.log(targetPost);
+            for (const each of targetPost) {
+                console.log(each.body);
+            }
+        }else{
+            console.log('not found');
+        }
+
+        const userPosts = posts.filter(function(post) {
+            return post.userId == userId
+        })
+
+        console.log('\nUser posts: ');
+
+        if(userPosts.length > 0) {
+            for (const each of userPosts) {
+                console.log(each.body);
+                console.log('------------\n');
+            }
         }else{
             console.log('not found');
         }

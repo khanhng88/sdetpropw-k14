@@ -25,11 +25,22 @@ async function run() {
     let userId = readLine.question('Please input your userid: ')
     let postId = readLine.question('Please input your postid: ')
 
+    const posts = arrayObj.filter(function(post) {
+        return post.userId == userId
+    })
+
+    console.log('User posts: \n');
+    if(posts.length > 0) {
+        for (const each of posts) {
+            console.log(each.body);
+            console.log('\n');
+        }
+    }
+
     const targetPost = arrayObj.filter(function(post) {
         return post.userId == userId && post.id == postId
     })
     if(targetPost.length > 0) {
-        console.log('Found post\n');
         console.log('Here is its body\n',targetPost[0].body);
         
     }else{
