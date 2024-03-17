@@ -1,0 +1,10 @@
+const Dog = require("./Dog")
+const Horse = require("./Horse")
+const RaceController = require("./RaceControlller")
+const Tiger = require("./Tiger")
+
+const dog = new Dog()
+const tiger = new Tiger()
+const horse = new Horse()
+const winner = RaceController.findWinner([dog, tiger, horse])
+winner.showMsg()
