@@ -28,4 +28,10 @@ export default class Book {
         return this.year
     }
 
+    setBookInfo(title:string, author:string, year:number): void{
+        this.title =  title
+        this.author = author
+        this,year =year
+    }
+
 }
